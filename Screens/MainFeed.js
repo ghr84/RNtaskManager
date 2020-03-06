@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView, Button, Text } from 'react-native';
 
 // Local Imports
 
@@ -7,13 +7,15 @@ import TaskCard from '../components/Taskcard';
 import Search from '../components/SearchInput';
 import MonthBtn from '../components/MonthBtn';
 import FilterBtn from '../components/FilterBtn';
+//import AddTaskScreen from './AddTaskScreen';
 // import StackNavigator from '../navigation/StackNavigator';
 import BtmTabNavigator from '../navigation/BtmTabNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
-
-const Home = ({ }) => {
-
+const Home = ({ navigation }) => {
+    console.log(navigation)
     return (
         <View>
             <View style={styles.body}>
@@ -26,7 +28,6 @@ const Home = ({ }) => {
                     <TaskCard />
                 </ScrollView>
             </View>
-
         </View>
     )
 }

@@ -8,8 +8,8 @@ import { NavigationContainer } from '@react-navigation/native';
 // Local Imports
 
 import AddTaskScreen from '../Screens/AddTaskScreen';
-// import BtmTabNavigator from './BtmTabNavigator';
-import MainFeed from '../Screens/MainFeed'
+import BtmTabNavigator from './BtmTabNavigator';
+//import MainFeed from '../Screens/MainFeed'
 
 
 const Stack = createStackNavigator();
@@ -17,9 +17,9 @@ const Stack = createStackNavigator();
 function MyStack() {
     return (
 
-        <Stack.Navigator initialRouteName="AddTaskScreen"
+        <Stack.Navigator initialRouteName="BtmTabNavigator"
             screenOptions={{ gestureEnabled: true }}>
-            <Stack.Screen name="MainFeed" component={MainFeed} />
+            <Stack.Screen options={{ title: null }} name="BtmTabNavigator" component={BtmTabNavigator} />
             <Stack.Screen
                 name="AddTaskScreen"
                 component={AddTaskScreen}

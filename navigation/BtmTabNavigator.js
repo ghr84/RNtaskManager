@@ -17,19 +17,19 @@ import Alerts from '../Screens/Alerts';
 import Settings from '../Screens/Settings';
 
 
-function AppNavigation({ }) {
+function AppNavigation({ navigation }) {
 
     const Tab = createBottomTabNavigator();
-
+    console.log(navigation)
     return (
         <Tab.Navigator
-            initialRouteName="To Do"
+            initialRouteName="MainFeed"
             tabBarOptions={{
                 activeTintColor: '#e91e63',
             }}
         >
             <Tab.Screen
-                name="To Do"
+                name="MainFeed"
                 component={MainFeed}
                 options={{
                     tabBarLabel: 'To Do',
@@ -49,13 +49,13 @@ function AppNavigation({ }) {
                 }}
             />
             <Tab.Screen
-                name="StackNavigator"
-                component={StackNavigator}
+                name="AddTaskScreen"
+                component={AddTaskScreen}
                 options={{
                     tabBarLabel: '',
                     tabBarIcon: () => (
-                        // <View style={styles.addBtn} onPress={() => navigation.navigate('AddStackModal')}>
-                        <View style={styles.addBtn}>
+                        <View style={styles.addBtn} onPress={() => navigation.navigate('AddTaskScreen')}>
+                            {/* <View style={styles.addBtn}> */}
                             <Feather name="plus" color={"white"} size={30} />
                         </View>
                         // <Button title="adf" onPress={() => {

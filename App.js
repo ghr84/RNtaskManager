@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import BtmTabNavigator from './navigation/BtmTabNavigator'
 // import MainFeed from './Screens/MainFeed';
-// import StackNavigator from './navigation/StackNavigator';
+import StackNavigator from './navigation/StackNavigator';
 
 // Núverandi flæði: BottomNavigation (+) takki renderar fyrsta skjá í StackNavigator (AddTaskScreen) .. 
 // En hann er fyrsti skjárinn í stakknum þannig skjárinn er ekki með back takka og tekur ekki allan skjáinn .. 
@@ -17,8 +17,8 @@ export default function App() {
   return (
     <NavigationContainer>
 
-
-      <BtmTabNavigator />
+      <StackNavigator></StackNavigator>
+      {/* <BtmTabNavigator /> */}
 
     </NavigationContainer>
   );
